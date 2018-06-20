@@ -1,0 +1,114 @@
+
+Hadoop - ok
+ssh localhost
+ssh-keygen -t dsa -P '' -f ~/.ssh/id_dsa
+cat ~/.ssh/id_dsa.pub >> ~/.ssh/authorized_keys
+/Users/jamsrandorjb/Downloads/hadoop-2.6.5
+bin/hdfs namenode -format
+sbin/start-dfs.sh
+sbin/start-yarn.sh
+Sbin/start-all.sh
+export HADOOP_lar/hadoop/3.0.0/libexec/
+
+/Library/Java/JavaVirtualMachines/jdk-10.0.1.jdk/Contents/Home
+sudo open -a TextEdit hadoop-env.sh
+
+/Users/jamsrandorjb/Downloads/hadoop-2.6.5/sbin/start-dfs.sh
+/Users/jamsrandorjb/Downloads/hadoop-2.6.5/sbin/start-yarn.sh
+http://localhost:50070/dfshealth.html#tab-overview
+http://localhost:8088/cluster
+http://localhost:50070/dfsnodelist.jsp?whatNodes=LIVE
+./stop-all.sh
+http://zhongyaonan.com/hadoop-tutorial/setting-up-hadoop-2-6-on-mac-osx-yosemite.html
+/Users/jamsrandorjb/Downloads/hadoop-2.6.5/sbin/stop-yarn.sh
+/Users/jamsrandorjb/Downloads/hadoop-2.6.5/sbin/stop-dfs.sh
+
+bin/hadoop dfs -mkdir hdfs://localhost:9000/hbase
+
+—————————————————————————————————————————————
+Hive—installed - create_table, save, into
+/Users/jamsrandorjb/Downloads/apache-hive-1.2.2-bin
+export HIVE_HOME=$(pwd)
+
+/usr/local/Cellar/hadoop/3.0.0
+
+Hadoop must be in your path for hive executable to work.
+If you want to use HCatalog with Pig, set $HCAT_HOME in your profile:
+  export HCAT_HOME=/usr/local/opt/hive/libexec/hcatalog
+ /usr/local/Cellar/hive/2.3.1
+—————————————————————————————————————————————
+HBase—
+https://www.cloudera.com/documentation/enterprise/5-4-x/topics/cdh_ig_services_stop.html
+#/usr/local/Cellar/hbase/1.2.6
+#/usr/local/Cellar/hbase/1.2.6/libexec/bin
+
+Brew services start zookeeper
+/Users/jamsrandorjb/Downloads/hbase-1.2.6/bin/
+Brew services start zookeeper
+./hbase-daemon.sh start thrift
+#./hbase zookeeper
+ ./hbase regionserver start
+./hbase-daemon.sh start master
+./start-hbase.sh
+hBase shell
+create 'tb_twitter', 'full_text', 'positive_predictions', 'negative_predictions', 'created_date'
+scan 'tb_twitter'
+—————————————————————————————————————————————
+Jupyter - ok
+pip3 Jupyter
+jupyter notebook
+—————————————————————————————————————————————
+Spark - ok
+spark-shell
+
+—————————————————————————————————————————————
+Python-twitter
+http://adilmoujahid.com/posts/2014/07/twitter-analytics/
+Brew services restart zookeeper
+Brew services restart Kafka
+Python3 consumer.py
+Python3 producer.py
+—————————————————————————————————————————————
+Kafka-consumer,topic -ok
+sh bin/zookeeper-server-start.sh config/zookeeper.properties
+sh bin/kafka-server-start.sh config/server.properties
+./kafka-server-start.sh /Users/jamsrandorjb/Downloads/kafka_2.11-1.1.0/config/server.properties
+./kafka-topics.sh --zookeeper localhost:9092  --create --topic test
+
+./kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic test --from-beginning
+./kafka-console-producer.sh --broker-list localhost:9092 --topic test
+—————————————————————————————————————————————
+Zookeeper - ok
+Brew services start zookeeper
+—————————————————————————————————————————————
+
+
+
+
+
+
+
+
+
+sudo brew services list
+brew services stop hbase
+brew services stop kafka
+brew services stop zookeeper
+brew services start zookeeper
+—Downloads/hadoop
+bin/hdfs namenode -format
+—Hadoop/sbin
+./start-all.sh
+./start-dfs.sh
+./start-yarn.sh
+—Downloads hbase/bin
+./hbase-daemon.sh start master
+./hbase-daemon.sh start regionserver
+./hbase-daemon.sh start rest
+./hbase-daemon.sh start thrift
+./hbase shell
+—Downloads kafka
+Brew services stop kafka
+sh bin/zookeeper-server-start.sh config/zookeeper.properties
+sh bin/kafka-server-start.sh config/server.properties
+lsof -t -i :2181
